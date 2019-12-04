@@ -1,0 +1,4 @@
+*.txt
+/render/*.html
+
+/.vscode

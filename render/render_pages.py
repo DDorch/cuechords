@@ -6,7 +6,7 @@ dname = os.path.dirname(abspath)
 os.chdir(dname)
 
 #Read model
-with open("model.html") as f:
+with open("model.html", encoding="utf-8") as f:
     sModel = f.read()
 
 # Read list of files
