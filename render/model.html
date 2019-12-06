@@ -1,34 +1,54 @@
 <html>
-    <header>
-        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-        <title>$TITLE$</title>
-    </header>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <title>$TITLE$</title>
     <style type="text/css">
-    a{
-        color:cornflowerblue;
-        text-decoration: none;
-    }
-    body{
-        background: black;
-        color: blanchedalmond;
-        font-family: 'Consolas', 'Courier New', 'monospace';
-    }
-    h1 {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: 60px;
-        color: greenyellow;
-    }
-    #lyrics {
-        font-weight: bold;
-        font-size: $SIZE$vw;
-    }
+        a {
+            color: cornflowerblue;
+            text-decoration: none;
+        }
+
+        body {
+            background: black;
+            color: blanchedalmond;
+            font-family: 'Consolas', 'Courier New', 'monospace';
+        }
+
+        h1 {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 60px;
+            color: greenyellow;
+        }
+
+        #lyrics {
+            font-weight: bold;
+            font-size: $SIZE$vw;
+        }
+        #virgin_bottom {
+            height: 100vh;
+        }
     </style>
-    <body>
-        <h1><a href="index.html">&#x2302;</a> $TITLE$</h1>
-        <div id="lyrics">
-            $CONTENT$
-        </div>
-        <h1><a href="index.html">&#x2302;</a></h1>
-        <footer>Page générée avec <a href="https://github.com/DDorch/cuechords">https://github.com/DDorch/cuechords</a></footer>
-    </body>
+    <script type = "text/javascript">
+        document.addEventListener("keypress", (event) => {
+            if(event.keyCode == 32) {
+                event.preventDefault();
+                window.scrollBy(0, window.innerHeight*.9);
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <h1><a href="index.html">&#x2302;</a> $TITLE$</h1>
+    <div id="lyrics">
+        $CONTENT$
+    </div>
+    <h1><a href="index.html">&#x2302;</a></h1>
+    <div id="virgin_bottom"></div>
+    <h1><a href="index.html">&#x2302;</a></h1>
+    <footer>Page générée avec <a href="https://github.com/DDorch/cuechords">https://github.com/DDorch/cuechords</a>
+    </footer>
+</body>
+
 </html>
